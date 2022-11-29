@@ -1,38 +1,262 @@
-.App {
-  text-align: center;
+:root {
+    --bg-color-01: #FFBF18;
+    --bg-color-02: #FFF8EA;
+    --bg-color-03: #FFFFFF;
+    --cta-color-01: #4F48EC;
+    --cta-color-02: ;
+    --font-color-01: #1E1968;
+    --font-color-02: #64628C;
+    --font-color-03: #DFDFEA;
+    --font-color-04: #fefeff;
+    --bx-shd-01: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    --border: .02rem solid magenta;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    background-color: var(--bg-color-02);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+a {
+    text-decoration: none;
+}
+
+::-webkit-scrollbar {
+    width: .3rem;
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--bg-color-02);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--bg-color-01);
+    border-radius: 1rem;
+}
+
+.cta-01 {
+    background-color: var(--cta-color-01);
+    color: var(--font-color-04);
+    border: none;
+    border-radius: .2rem;
+    padding: .75rem 1.5rem;
+    font-size: 1.2rem;
+}
+
+.cta-02 {
+    background-color: var(--cta-color-01);
+    color: var(--font-color-04);
+    border: none;
+    border-radius: .2rem;
+    padding: .5rem 1rem;
+    font-size: .8rem;
+}
+
+
+/* WELCOME */
+
+.bg-logo {
+    position: absolute;
+    margin: 0 auto;
+    margin-left: 30rem;
+}
+
+.main-wel {
+    position: relative;
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.main-wel h1 {
+    margin: 5rem;
+    font-size: 3rem;
+    color: var(--font-color-01);
+}
+
+.wel-links {
+    margin-top: 5rem;
+}
+
+.wel-links a {
+    text-decoration: none;
+    margin: 1.5rem;
+    padding: .5rem;
+    border-radius: .2rem;
+    font-size: 1.2rem;
+    background-color: var(--cta-color-01);
+    color: var(--font-color-04);
+}
+
+
+/* NAVBAR */
+
+.main-nav {
+    background-color: var(--bg-color-01);
+    display: flex;
+    padding: 1rem;
+}
+
+.left-nav {
+    display: flex;
+    width: 75%;
+    padding: 0 3rem;
+}
+
+.left-nav h2 {
+    margin: 0 .75rem;
+    color: var(--font-color-04);
+}
+
+.profile-menu {
+    background: transparent;
+    border: none;
+    display: flex;
+}
+
+.profile-menu p {
+    font-size: 1rem;
+    margin: .2rem .5rem;
+    padding: 0;
+}
+
+.profile-menu-content {
+    display: none;
+    position: absolute;
+    background-color: var(--bg-color-03);
+    padding: 0 2rem;
+    margin: 0;
+}
+
+.right-nav:hover .profile-menu-content {
+    display: block;
+}
+
+
+/* SIGNUP */
+
+.main-signup {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    color: var(--cta-color-01);
+}
+
+.main-signup label {
+    display: inline-block;
+    width: 25%;
+    color: var(--font-color-01);
+    background-color: var(--bg-color-02);
+    font-weight: 500;
+    font-size: 1.1rem;
+    text-align: right;
+}
+
+.main-signup input {
+    width: 60%;
+    margin: 1rem;
+    padding: .5rem;
+    border: .01rem solid var(--font-color-02);
+    background-color: var(--bg-color-02);
+    box-shadow: var(--bx-shd-01);
+}
+
+
+/* LOGIN */
+
+
+/* HOME */
+
+.main-home {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+}
+
+.left-home {
+    width: 20%;
+    margin: 0 .5rem;
+    height: 20rem;
+    border-radius: .2rem;
+    box-shadow: var(--bx-shd-01);
+    background-color: var(--bg-color-03);
+}
+
+.left-home ul li {
+    list-style: none;
+    margin: 1.5rem 0;
+}
+
+.btn {
+    background: transparent;
+    border: none;
+    color: var(--font-color-01);
+    font-size: 1rem;
+}
+
+.right-home {
+    background-color: var(--bg-color-03);
+    width: 75%;
+    height: 85vh;
+    overflow-y: auto;
+    margin: 0 .5rem;
+    border-radius: .2rem;
+    box-shadow: var(--bx-shd-01);
+}
+
+.user-info {
+    padding: 1rem;
+}
+
+.user-info h1 {
+    color: var(--font-color-01);
+}
+
+.user-info h6 {
+    color: var(--font-color-02);
+    font-weight: 400;
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+td {
+    color: var(--font-color-01);
+}
+
+td:nth-child(1) {
+    width: 10%;
+}
+
+td:nth-child(2) {
+    width: 70%;
+}
+
+
+/* @media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
 }
 
 .App-link {
-  color: #61dafb;
-}
+    color: #61dafb;
+} */
 
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
